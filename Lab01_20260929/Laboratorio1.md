@@ -42,7 +42,7 @@ __mv primo2.C secondo.C__
 __mv secondo.C ../__  
 
 # Eserczio 4 (ssh,scp)
-Per completare questo esercizio è  necessario essere registrati al Laboratorio di Calcolo (LdC) del Dipartimento di Fisica. Chi non l'avesse ancora fatto è pregato di provvedere seguendo le istruzioni fornite sul sito Ariel del corso.
+Per completare questo esercizio è  necessario essere registrati al Laboratorio di Calcolo (LdC) del Dipartimento di Fisica. Chi non l'avesse ancora fatto è pregato di provvedere seguendo le istruzioni fornite sul sito Ariel del corso. Inoltre, non dovete essere in Laborarorio di Calcolo (per ragioni di sicurezza, le sessioni ssh dalle macchine di lab alle macchine stesse sono state disabilitate): in pratica dovete farlo da casa, dopo aver installato WSL se avete Windows.
 
 1. Collegarsi a (una) macchina del LdC con il comando  
 __ssh `<usermame>@tolab.fisica.unimi.it`__  
