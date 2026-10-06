@@ -79,7 +79,10 @@ Il comando __git pull__ sincronizzerà il contenuto della cartella __LabInfo_202
 NOTA: se avete bisogno di usare il materiale (file/cartelle ecc...), non modificate il contenuto di questa cartella, ma fate una copia di quello che vi serve altrove. Altrimenti le cose si complicano.
 
 ## Esercizio 5
-Nella cartella __Informatica_CorsoB__ create una cartella __Laboratorio02__. Copiate nella cartella __Laboratorio02__ appena creata il file __helloworld.C__ presente nella cartella __LabInfo_2026_27/Lab02_20261006__.
+Nella cartella __Informatica_Gruppo2__ create una cartella __MyStuff__.
+Copiate la cartella __LabInfo_2026_27/Lab01_20260929__ e la cartella __LabInfo_2026_27/Lab01_20261006__ nella cartella __MyStuff__ usando l'opportuno comando di copia (ricordatevi l'opzione __-r__).
+
+A questo punto avrete il materiale fornito per il primo e per il secondo laboratorio copiato nel vostro effettivo spazio di lavoro per il corso. In questo spazio di lavoro potrete fare quello che volete: aggiungere/rinuovere files/cartelle, rinominare files ecc...
 
 __NOTA__: Non dovete (ripeto: NON DOVETE) toccare la cartella __LabInfo_2026_27__. Questa cartella verrà aggiornata ogni volta che scaricherete il materiale dal repository (sorgente) su GitHub. Quello che dovrete fare è copiare, di volta in volta, la cartella del laboratorio in corso nella cartella "vostra" in cui inserirete tutto il materiale, fornito e prodotto da voi, del corso di Informatica. Se lavoraste direttamente in __LabInfo_2026_27__ e nelle sue sottocartelle, potreste incorrere in messaggi di __git__ di difficile interpretazione. Chi di voi fosse esperto di __git__, faccia pure come preferisce, ma non venite a chiedere di risolvere problemi da voi stessi creati ;-).
 
