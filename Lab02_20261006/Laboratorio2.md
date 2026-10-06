@@ -10,11 +10,11 @@ __mkdir <nome_cartella>__
 
 dove <nome_cartella> può essere o il nome completo (percorso da root / ) oppure il nome relativo alla working directory.
 
-Usare il comando __mkdir__ per creare una cartella __Informatica_CorsoB__ nella vostra home.
+Usare il comando __mkdir__ per creare una cartella __Informatica_Gruppo2__ nella vostra home.
 
 Verificate, dopo aver eseguito il comando, che la cartella sia stata effettivamente creata con il comando __ls__. 
 
-Spostatevi nella cartella __Informatica_CorsoB__.
+Spostatevi nella cartella __Informatica_Gruppo2__.
 
 # Esercizio 2
 
@@ -54,32 +54,34 @@ La cartella <nome_cartella> e tutto il suo contenuto vengono copiati nella desti
 
 Copiare il file _primoFile.txt__ creato nell'esercizio precedente nella vostra home directory (~).
 
-Copiare quindi il file __primoFile.txt__ nella cartella __Informatica_CorsoB__ nella home con il nome __copiaPrimoFile.txt__.
+Copiare quindi il file __primoFile.txt__ nella cartella __Informatica_Gruppo2__ nella home con il nome __copiaPrimoFile.txt__.
 
-Creata la cartella __~/Appo__, copiare la cartella __Informatica_CorsoB__ nella cartella __~/Appo__.
+Creata la cartella __~/Appo__, copiare la cartella __Informatica_Gruppo2__ nella cartella __~/Appo__.
 
-Verificate il successo dell'operazione. Eliminate quindi la cartella __~/Appo__ con il comando __rm -r__.
+Verificate il successo dell'operazione. Eliminate quindi la cartella __~/Appo__ con il comando __rm -r ~/Appo__.
 
 ## Esercizio 4
 
-Spostatevi nella cartella __Informatica_CorsoB__. Da qui lanciate il comando:
+Spostatevi nella cartella __Informatica_Gruppo2__. Da qui lanciate il comando:
 
-git clone https://github.com/kindaguy/LabInfo_2025_26.git 
+git clone https://github.com/kindaguy/LabInfo_2026_27.git 
 
-Questo comando copierà il contenuto del repository nella cartella in cui vi trovate. In particolare, nella cartella __Informatica_CorsoB__ sarà ora preseente la cartella __LabInfo_2025_26__.
+Questo comando copierà il contenuto del repository nella cartella in cui vi trovate. In particolare, nella cartella __Informatica_Gruppo2__ sarà ora preseente la cartella __LabInfo_2025_26__.
 
 
 Da oggi in avanti potrete caricare tutto il materiale a voi fornito sul repostory nella cartella come segue:
 
-1. Collocatevi nella cartella __Informatica_CorsoB/LabInfo_2025_26__
+1. Collocatevi nella cartella __Informatica_Gruppo2/LabInfo_2026_27__
 2. scrivete il comando __git pull__
 
-Il comando __git pull__ sincronizzerà il contenuto della cartella __LabInfo_2025_26__ locale (sul computer) col contenuto della cartella remota (per intenderci, quella residente sulle macchine di GitHub).
+Il comando __git pull__ sincronizzerà il contenuto della cartella __LabInfo_2026_27__ locale (sul computer) col contenuto della cartella remota (per intenderci, quella residente sulle macchine di GitHub).
 
 NOTA: se avete bisogno di usare il materiale (file/cartelle ecc...), non modificate il contenuto di questa cartella, ma fate una copia di quello che vi serve altrove. Altrimenti le cose si complicano.
 
 ## Esercizio 5
-Nella cartella __Informatica_CorsoB__ create una cartella __Laboratorio02__. Copiate nella cartella __Laboratorio02__ appena creata il file __helloworld.C__ presente nella cartella __LabInfo_2025_26/Lab02_20251007__.
+Nella cartella __Informatica_CorsoB__ create una cartella __Laboratorio02__. Copiate nella cartella __Laboratorio02__ appena creata il file __helloworld.C__ presente nella cartella __LabInfo_2026_27/Lab02_20261006__.
+
+__NOTA__: Non dovete (ripeto: NON DOVETE) toccare la cartella __LabInfo_2026_27__. Questa cartella verrà aggiornata ogni volta che scaricherete il materiale dal repository (sorgente) su GitHub. Quello che dovrete fare è copiare, di volta in volta, la cartella del laboratorio in corso nella cartella "vostra" in cui inserirete tutto il materiale, fornito e prodotto da voi, del corso di Informatica. Se lavoraste direttamente in __LabInfo_2026_27__ e nelle sue sottocartelle, potreste incorrere in messaggi di __git__ di difficile interpretazione. Chi di voi fosse esperto di __git__, faccia pure come preferisce, ma non venite a chiedere di risolvere problemi da voi stessi creati ;-).
 
 
 
