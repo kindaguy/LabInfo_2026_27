@@ -24,7 +24,7 @@ __touch <nome_file>__
 
 dove, come al solito, <nome_file> può essere il nome completo (percorso / -> file, nome del file incluso) o relativo rispetto alla working directory.
 
-Dopo essersi posizionati nella cartella __Informatica_CorsoB__, create un file dal nome _primoFile.txt_
+Dopo essersi posizionati nella cartella __Informatica_Gruppo2__, create un file dal nome _primoFile.txt_
 
 Verificate la presenza del file con il solito __ls__.
 
