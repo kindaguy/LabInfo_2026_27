@@ -42,7 +42,7 @@ NOTA: i file vengono normalmente creati dalle applicazioni. Questo fatto non cam
 
 Il comando __cp__ effettua la copia di file o cartelle
 
-__cp <nome_file> <destinazione>__
+__cp <nome_file> < destinazione >__
 
 copia il file __nome_file__ nella __destinazione__. Se la destinazione è il nome di una cartella, il file viene copiato con il suo nome. Se la destinazione è un nome di file, allora il file viene copiato e rinomimato.
 
