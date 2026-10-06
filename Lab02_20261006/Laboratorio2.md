@@ -54,7 +54,7 @@ La cartella <nome_cartella> e tutto il suo contenuto vengono copiati nella desti
 
 Copiare il file _primoFile.txt__ creato nell'esercizio precedente nella vostra home directory (~).
 
-Copiare quindi il file __primoFile.txt__ nella cartella __Informatica_Gruppo2__ nella home con il nome __copiaPrimoFile.txt__.
+Copiare quindi il file __pippo.txt__ nella cartella __Informatica_Gruppo2__ nella home con il nome __poldo.txt__.
 
 Creata la cartella __~/Appo__, copiare la cartella __Informatica_Gruppo2__ nella cartella __~/Appo__.
 
