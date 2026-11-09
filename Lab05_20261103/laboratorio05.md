@@ -44,6 +44,3 @@ Come Esercizio 5, ma questa volta dobbiamo mantenere l'ordinamento relativo degl
 ## Esercizio 7
 Implementare la funzione __remove__. La funzione riceve in ingresso un array di interi, il numero __num__di elementi in esso contenuti e la posizione dell'elemento da eliminare. La funzione dovrà restituire -1 se nella posizione indicata non ci sono elementi validi, o __num-1__ se l'operazione va a buon fine. La rimozione non deve preservare l'ordinamento relativo degli elementi dell'array.
 
-## Esercizio 8 (Bonus track)
-
-La 
