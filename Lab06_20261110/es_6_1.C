@@ -25,7 +25,7 @@ int main(){
     }
     cout << endl <<"Il numero di voti presenti nel file è: " << conta << endl;
     file_in.close();
-
+    //NOTA: chiudo lo stream
     //Sappiamo quanti dati ci sono nel file, quindi possiamo creare un array di dimensione corretta
 
     dati = new int[conta];
@@ -35,8 +35,12 @@ int main(){
     //sia andata a buon fine (quindi non controllo se dati è NULL).
 
     file_in.open("votiZoppi.dat");
+    //Riaprendo lo stream la lettura riparte dall'inizio del file.
+
     if(file_in.fail()){
-        cout << "Errore nell'apertura del file" << endl;
+        //Ricontrollo l'apertura del file, anche se l'avevo già fatto prima.
+        //Se siete di natura ottimista, potete anche non farlo, ma io sono un pessimista di natura.
+        cout << "Errore nell'apertura del file in caricamento" << endl;
         return 1;
     }
     //Carico i dati nell'array

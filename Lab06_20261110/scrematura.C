@@ -74,13 +74,14 @@ int main(){
 
     //Scrematura dei dati: quando elimino un elemento lo sovrascrivo con l'ultimo elemento dell'array.
 
-    for(int i=0; i<conta; i++){
-        if(!valido(dati[i])){
-            dati[i] = dati[conta-1];
-            conta--;
-            i--; // Per non saltare l'elemento appena spostato
-        } 
-    }
+    // for(int i=0; i<conta; i++){
+    //     if(!valido(dati[i])){
+    //         dati[i] = dati[conta-1];
+    //         conta--;
+    //         i--; // Per non saltare l'elemento appena spostato
+    //     } 
+    // }
+    conta = screma(dati,conta);
 
 
 
@@ -90,7 +91,7 @@ int main(){
     //Scrivo il numero di voti validi
     file_out << contaOK << endl << endl;
     for(int i=0;i<contaOK;i++){
-        file_out << datiOK[i] << endl;
+        file_out << dati[i] << endl;
     }
     file_out.close();
 

@@ -72,6 +72,10 @@ $c^* = c.re - c.im$
 
 in una variabile  __complesso cdag__. 
 
+NOTA: per usare la funzione __arctan__ e __sqrt__ dovete caricare la libreria __cmath__ 
+
+#include \<cmath\>
+
 ## Esercizio 6
 Il file __complessi.dat__ contiene un numero non precisato di valori complessi. Su ogni riga compariono due valori: il primo indica la parte reale del numero, il secondo la parte immaginaria. Scrivere un programma che:
 
@@ -82,12 +86,13 @@ Il file __complessi.dat__ contiene un numero non precisato di valori complessi. 
 
 
 ## Esercizio 7
-Scrivere le funzioni:
+Scrivere le funzioni di manipolazione di array di __double__:
+
 - Appendi
 - Inserici in posizione indicata (senza rispettare ordine relativo elementi)
 - Inserici in posizione indicata (rispettando ordine relativo elementi)
 - Rimuovi elemento in posizione indicata (senza rispettare ordine relativo elementi)
 - Rimuovi elemento in posizione indicata (rispettando ordine relativo elementi)
-- Ricerca elemento (attenzione: per ragioni numeriche, due numeri complessi con campi rappresentati come __double__ sono uguali se la loro parte reale e la loro parte immaginaria distano, entrambe, meno di $10^{-17}$).
+- Ricerca elemento (attenzione: per ragioni numeriche, due numeri complessi con campi rappresentati come __double__ sono uguali se la loro parte reale e la loro parte immaginaria distano, entrambe, meno di $10^{-17}$). Per valutare il modulo di un valore, usate la funzione __fabs__ della libreria \<cmath\>.
 
 NOTA: non dovete partire da zero: avete già pensato a quasi tutto quando avete implementato le stesse operazioni per array di interi.
