@@ -61,7 +61,7 @@ Definita la t-upla
 <b>struct complesso{
     double re;
     double im;
-}</b>
+};</b>
 
 scrivere un programma che, lette da tastiera la parte reale e la parte immaginaria del numero complesso
 1. Determini il modulo
