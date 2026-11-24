@@ -41,7 +41,7 @@ che, ricevuto in ingresso (l'indirizo di) un array di interi, un riferiemento al
 3) Ricopi, elemento per elemento, i primi __newUsed__ elementi dell'array __v__.
 4) Registri in __size__ il valore __newSize__
 5) Registri in __used__ il valore di __newUsed__.
-6) Cancelli  l'array __v__ (__remove [] v__).
+6) Cancelli  l'array __v__ (__delete [] v__).
 7) Restituisca l'indirizzo del nuovo array creato, ovvero il contenuto della variabile __newArray__ (__return newArray__).
 
 NOTA: quando dichiarate una variabile puntatore (come __newArray__) prendete l'abitudine di inizializzarla a __NULL__.
