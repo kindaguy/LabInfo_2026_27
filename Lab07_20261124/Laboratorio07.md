@@ -36,7 +36,7 @@ __int *resize(int v[], int& size, int& used, int newSize)__
 che, ricevuto in ingresso (l'indirizo di) un array di interi, un riferiemento alla variabile (intera) che contiene la sua dimensione, un riferimento alla variabile (intera) che contiene il numero di elementi usati dell'array e un intero che indica una nuova dimensione, faccia quanto segue:
 
 
-1) Crei dinamicamente un array di interi di dimensione __newSize__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la __new__ resituisce __NULL__), la funzione dovrà stampare il messaggio "Resize: Allocazione fallita!"  e restituire il valore __NULL__ (e terminare).
+1) Crei dinamicamente un array di interi di dimensione __newSize__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la __new__ resituisce __NULL__), la funzione dovrà stampare il messaggio "Resize: Allocazione fallita!"  e restituire il valore __v__ (e terminare).
 2) Dertermini il minimo tra __newSize__ e __used__ e assegni il valore determinato alla variabile (locale) __int newUsed__. 
 3) Ricopi, elemento per elemento, i primi __newUsed__ elementi dell'array __v__.
 4) Registri in __size__ il valore __newSize__
