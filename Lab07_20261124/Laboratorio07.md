@@ -1,7 +1,6 @@
 # Ultime operazioni su array: resize. Vettori $\mathbb{R}^n$. Librerie.
 
-## Operazione di resize di un array
-
+## La t-upla myArray_T
 
 Partiamo dalla definizione di una t-upla che ci consenta di rappresentare un array tenendo traccia di tutte le informazioni utili alla sua gestione:
 
@@ -14,11 +13,18 @@ __T *raw;__
 
 __};__
 
-Notate che ho lasciato il tipo indicato con T nel nome. Se per esempio vorrete un array di int dovrete sostituire __int__ ad ogni occorrenza di T. 
+Notate che ho lasciato il tipo indicato con T nel nome. Se per esempio vorrete un array di int dovrete sostituire __int__ ad ogni occorrenza di T; se invece avessimo un array di __float__...beh...usate la vostra immaginazione. 
+
+- Il campo __size__ contiene il numero di elementi dell'array
+- Il campo __used__ contiene il numero di valori, di tipo __T__, effettivamente contenuti nell'array.
+- Il campo __raw__ contiene l'indirizzo in cui inizia l'array. 
+
+Le operazioni su array (_append_, _insert_, _remove_) che abbiamo fino ad ora implementato possono essere facilmente utilizzate per agire su t-uple __myArray__. Prendiamo le funzioni che avete implementato per il Laboratorio 5 (Esercizi 4,5,6 e 7). Come potete chiamare quelle funzioni in modo tale da lavorare su una istanza della t-upla __myArray_int__?
+
 
 
 ## Esercizio 1
-Scrivete un programma che, definito il tipo __myArray_int__ risolva quanto richiesto nell'Esercizio 1 del Laboratorio 6 caricando i dati in una istanza della t-upla myArray_int. Il campo __size__ dovrà contenere il numero di elementi dell'array mentre il campo __used__ il numero di elementi usati dell'array (i due valori possono ovviamente coincidere).
+Scrivete un programma che, definito il tipo t-upla __myArray_int__, risolva quanto richiesto nell'Esercizio 1 del Laboratorio 6 caricando i dati in una istanza della t-upla myArray_int. Il campo __size__ dovrà contenere il numero di elementi dell'array mentre il campo __used__ il numero di elementi usati dell'array (i due valori possono ovviamente coincidere).
 
 NOTA: per comodità, vi ho messo una copia del file __votiZoppi.dat__ in questa cartella.
 
@@ -30,17 +36,17 @@ __int *resize(int v[], int& size, int& used, int newSize)__
 che, ricevuto in ingresso (l'indirizo di) un array di interi, un riferiemento alla variabile (intera) che contiene la sua dimensione, un riferimento alla variabile (intera) che contiene il numero di elementi usati dell'array e un intero che indica una nuova dimensione, faccia quanto segue:
 
 1) Determini il valore minimo tra __size__ e __newSize__ e lo assegni alla variabile locale  __int newDim__.
-2) Crei dinamicamente un array di interi di dimensione __newDim__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la new resituisce __NULL__), la funzione dovrà stampare il messaggio "Allocazione fallita!"  e restituire il valore __NULL__ (e terminare).
+2) Crei dinamicamente un array di interi di dimensione __newDim__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la __new__ resituisce __NULL__), la funzione dovrà stampare il messaggio "Resize: Allocazione fallita!"  e restituire il valore __NULL__ (e terminare).
 3) Dertermini il minimo tra __newSize__ e __used__ e assegni il valore determinato alla variabile (locale) __int newUsed__. 
 4) Ricopi, elemento per elemento, i primi __newUsed__ elementi dell'array __v__.
 5) Registri in __size__ il valore __newDim__
 6) Registri in __used__ il valore di __newUsed__.
-7) Cancelli (remove) l'array __v__.
-8) Restituisca l'indirizzo del nuovo array creato, ovvero il contenuto della variabile __newArray__.
+7) Cancelli  l'array __v__ (__remove [] v__).
+8) Restituisca l'indirizzo del nuovo array creato, ovvero il contenuto della variabile __newArray__ (__return newArray__).
 
-NOTA: quando dichiarate una variabile puntatore (come __newArray__) prendete l'abitudine di inizializzarla a __NULL__. La funzione che abbiamo appena scritto restituirà 
+NOTA: quando dichiarate una variabile puntatore (come __newArray__) prendete l'abitudine di inizializzarla a __NULL__.
 
-Questa funzione, a consuntivo, crea un nuovo array di dimensione __newSize__, ci riversa dentro quanto ci sta dei dati contenuti nel vecchio vettore, registra/restituisce tutte le informazioni necessarie per usare il nuovo vettore (usando reference/valore di ritorno).
+Questa funzione, a consuntivo, crea un nuovo array di dimensione __newSize__, ci riversa dentro quanto "ci sta" dei dati contenuti nel vecchio vettore, registra/restituisce tutte le informazioni necessarie per usare il nuovo vettore (usando reference/valore di ritorno).
 
 ## Esercizio 3
 Modificate l'Esercizio 2 del Laboratorio 6 in modo tale che, al termine della scrematura dei voti non validi, l'array dei dati venga ridimensionato in modo opportuno per poter contenere esattamente tutti i dati validi rimasti.
@@ -51,9 +57,9 @@ Scrivete una procedura
 
 __void resize(myArray_int &myV, int newSize)__
 
-che effettui l'operazione di resize su un __myArray_int__. 
+che effettui l'operazione di resize su un __myArray_int__ passato per riferimento. 
 
-ATTENZIONE: il lavoro sporco l'avete già fatto nell'esercizio 2. Questa funzione __resize__ deve solo richiamare in modo opportuno la funzione __resize__ di quell'esercizio.
+ATTENZIONE: il "lavoro sporco" l'avete già fatto nell'Esercizio 2. Questa funzione __resize__ deve solo richiamare in modo opportuno la funzione __resize__ di quell'esercizio.
 
 ## Esercizio 5
 
@@ -66,6 +72,8 @@ __int caricaVotiFile(const char nomefile[], myArray_int& contenitore)__
 che si occupi del caricamento dei dati da __votiZoppi.dat__. La funzione dovrà partire da un contenitore (array) con solo 4 elementi e "allargare" il vettore di 4 elementi alla volta quando lo spazio a disposizione sarà esaurito. 
 
 La funzione dovrà restituire il valore 0 se il caricamento va a buon fine, -1 se ci sono problemi con il file, -2 se ci sono problemi di allocazione.
+
+SUGGERIMENTO: potete anche modificare la funzione __append__, implementata nel Laboratorio 5, in modo tale che, quando lo spazio libero dell'array finisce, l'array venga ridimensionato aggiungendo una o più posizioni. Considerato che una __resize__ ha un costo di esecuzione conviene aggiungere più di un elemento in modo da evitare un numero eccessivo di __resize__ (per esempio, possiamo raddoppiare la dimensione dell'array). Ovviamente potrebbero rimanere posizioni vuote dell'array alla fine del caricamento.
 
 
 ## Esercizio 6
