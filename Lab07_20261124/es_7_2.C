@@ -46,12 +46,18 @@ int *resize(int v[], int& size, int& used, int newSize){
 
     //Punto 1
     newArray = new int[newSize];
+    if(newArray == NULL){
+        cout << endl << "Errore nell'allocazione del nuovo array!" << endl;
+        return v;
+    }
 
     //Punto 2
     if(newSize < used){
+        //Potrò copiare solo newSize elementi, quindi newUsed = newSize
         newUsed = newSize;
     }
     else{
+        //Potrò copiare tutti gli elementi, quindi newUsed = used
         newUsed = used;
     }
 
