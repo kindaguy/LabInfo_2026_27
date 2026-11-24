@@ -35,14 +35,14 @@ __int *resize(int v[], int& size, int& used, int newSize)__
 
 che, ricevuto in ingresso (l'indirizo di) un array di interi, un riferiemento alla variabile (intera) che contiene la sua dimensione, un riferimento alla variabile (intera) che contiene il numero di elementi usati dell'array e un intero che indica una nuova dimensione, faccia quanto segue:
 
-1) Determini il valore minimo tra __size__ e __newSize__ e lo assegni alla variabile locale  __int newDim__.
-2) Crei dinamicamente un array di interi di dimensione __newDim__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la __new__ resituisce __NULL__), la funzione dovrà stampare il messaggio "Resize: Allocazione fallita!"  e restituire il valore __NULL__ (e terminare).
-3) Dertermini il minimo tra __newSize__ e __used__ e assegni il valore determinato alla variabile (locale) __int newUsed__. 
-4) Ricopi, elemento per elemento, i primi __newUsed__ elementi dell'array __v__.
-5) Registri in __size__ il valore __newDim__
-6) Registri in __used__ il valore di __newUsed__.
-7) Cancelli  l'array __v__ (__remove [] v__).
-8) Restituisca l'indirizzo del nuovo array creato, ovvero il contenuto della variabile __newArray__ (__return newArray__).
+
+1) Crei dinamicamente un array di interi di dimensione __newSize__, registrando l'indirizzo di questo nuovo array in una variabile (locale) __int * newArray__. Se la __new__ fallisce (la __new__ resituisce __NULL__), la funzione dovrà stampare il messaggio "Resize: Allocazione fallita!"  e restituire il valore __NULL__ (e terminare).
+2) Dertermini il minimo tra __newSize__ e __used__ e assegni il valore determinato alla variabile (locale) __int newUsed__. 
+3) Ricopi, elemento per elemento, i primi __newUsed__ elementi dell'array __v__.
+4) Registri in __size__ il valore __newSize__
+5) Registri in __used__ il valore di __newUsed__.
+6) Cancelli  l'array __v__ (__remove [] v__).
+7) Restituisca l'indirizzo del nuovo array creato, ovvero il contenuto della variabile __newArray__ (__return newArray__).
 
 NOTA: quando dichiarate una variabile puntatore (come __newArray__) prendete l'abitudine di inizializzarla a __NULL__.
 
